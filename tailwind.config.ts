@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -51,6 +52,18 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				whatsapp: {
+					DEFAULT: 'hsl(var(--whatsapp-green))',
+					dark: 'hsl(var(--whatsapp-green-dark))',
+					light: 'hsl(var(--whatsapp-light-green))',
+					gray: 'hsl(var(--whatsapp-gray))',
+					'dark-gray': 'hsl(var(--whatsapp-dark-gray))'
+				},
+				chat: {
+					bg: 'hsl(var(--chat-bg))',
+					sent: 'hsl(var(--message-sent))',
+					received: 'hsl(var(--message-received))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -84,11 +97,32 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fadeIn': {
+					from: { opacity: '0' },
+					to: { opacity: '1' }
+				},
+				'slideUp': {
+					from: { transform: 'translateY(10px)', opacity: '0' },
+					to: { transform: 'translateY(0)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fadeIn 0.3s ease-out',
+				'slide-up': 'slideUp 0.3s ease-out'
+			},
+			backgroundImage: {
+				'gradient-whatsapp': 'var(--gradient-whatsapp)',
+				'gradient-subtle': 'var(--gradient-subtle)'
+			},
+			boxShadow: {
+				'message': 'var(--shadow-message)',
+				'elegant': 'var(--shadow-elegant)'
+			},
+			transitionProperty: {
+				'smooth': 'var(--transition-smooth)'
 			}
 		}
 	},
